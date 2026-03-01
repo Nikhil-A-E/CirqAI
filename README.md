@@ -211,6 +211,15 @@ barrier, no prerequisite knowledge needed.
 
 ---
 
+## Contributors
+
+We built CirqAI to simplify circuit design. Meet the team behind this project:
+- **Sujan S**
+- **Poornachandra B R**
+- **Nikhil A E**
+
+---
+
 ## Troubleshooting
 
 **"ngspice not found"**
