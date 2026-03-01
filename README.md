@@ -5,8 +5,6 @@
 > regional languages) and get a professional schematic 
 > + live simulation instantly.
 
-![CirqAI Demo](demo.png)
-
 ## What it does
 
 CirqAI removes the barrier between circuit ideas and 
@@ -152,6 +150,7 @@ description and click Generate Circuit.
 ---
 
 ## Project Structure
+```text
 CirqAI/
 ├── CirqAi-backend/
 │   ├── main.py              # FastAPI app + endpoints
@@ -170,6 +169,7 @@ CirqAI/
 │   └── .env.local           # API URL (not committed)
 │
 └── README.md
+```
 
 ---
 
