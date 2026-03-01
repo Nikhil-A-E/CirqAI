@@ -138,11 +138,11 @@ echo "VITE_API_URL=http://localhost:8000" > .env.local
 npm run dev
 ```
 
-Frontend runs at: http://localhost:5173
+Frontend runs at: http://localhost:3000
 
 ### Step 5 — Open in browser
 
-Go to **http://localhost:5173**
+Go to **http://localhost:3000**
 
 You should see the CirqAI interface. Type any circuit 
 description and click Generate Circuit.
