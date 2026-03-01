@@ -1,12 +1,7 @@
 services:
   - type: web
     name: cirqai-backend
-    env: python
-    buildCommand: >
-      apt-get update &&
-      apt-get install -y ngspice ffmpeg &&
-      pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    env: docker
     envVars:
       - key: GEMINI_API_KEY
         sync: false
