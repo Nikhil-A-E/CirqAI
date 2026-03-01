@@ -1,25 +1,25 @@
-FROM python:3.11-slim
+# 1. Choose the base environment
+FROM python:3.10-slim
 
-# Set working directory
+# 2. Set the working directory
 WORKDIR /app
 
-# Install system dependencies: ngspice and ffmpeg
-RUN apt-get update && apt-get install -y \
-    ngspice \
-    ffmpeg \
-    && rm -rf /var/lib/apt/lists/*
+# 3. This replaces your old BUILD COMMAND for system packages
+RUN apt-get update && apt-get install -y ngspice ffmpeg && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements file first to leverage Docker cache
+# 4. Copy your requirements file
 COPY CirqAi-backend/requirements.txt .
 
-# Install Python dependencies using python -m pip as requested
+# 5. This replaces your old BUILD COMMAND for Python packages
+# Using python -m pip to ensure it runs correctly on your setup
 RUN python -m pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the backend application code
+# 6. Copy the rest of your backend code
 COPY CirqAi-backend/ .
 
-# Expose the port (Render sets the PORT environment variable)
-EXPOSE 8000
+# 7. Expose the port Render uses
+EXPOSE 10000
 
-# Command to run the application, using Render's PORT environment variable or defaulting to 8000
-CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
+# 8. This replaces your old START COMMAND
+# You will need to change "app.py" to whatever file actually starts your backend
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
