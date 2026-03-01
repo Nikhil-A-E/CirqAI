@@ -316,7 +316,7 @@ export default function App() {
                 onKeyDown={handleKey}
                 placeholder={
                   "Describe any circuit...\n" +
-                  "e.g. 10MHz Colpitts oscillator with 2N2222"
+                  "e.g. RC low pass filter with 1kHz cutoff"
                 }
                 rows={4}
                 style={{
