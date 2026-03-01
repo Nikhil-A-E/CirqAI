@@ -33,4 +33,4 @@ npm install
 Create .env.local with: VITE_API_URL=http://localhost:8000
 npm run dev
 
-## Built for AMD Slingshot 2026 — Theme 9
+## Built for AMD Slingshot 2026 — Theme 2
