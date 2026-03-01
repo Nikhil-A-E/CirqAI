@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: cirqai-backend
-    env: docker
-    envVars:
-      - key: GEMINI_API_KEY
-        sync: false
